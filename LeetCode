@@ -1,0 +1,64 @@
+/// MARK: - LeetCode 13. Roman to Integer
+var s = "DCXXIII"
+var num = 1
+var num0 = 0
+var sum = 0
+
+for char in s.reversed() {
+    switch char {
+        case "I": num = 1
+        case "V": num = 5
+        case "X": num = 10
+        case "L": num = 50
+        case "C": num = 100
+        case "D": num = 500
+        case "M": num = 1000
+    default:
+        break
+    }
+    if num < num0 { sum -= num }
+    else { sum += num }
+    num0 = num
+}
+print(sum)
+
+
+/// MARK: - LeetCode 7. Reverse Integer
+var value = -1000002000
+var str = ""
+var newStr = ""
+var zero = true
+
+if value <= 0 {
+    newStr.append("-")
+    value = abs(value)
+}
+str = String(value)
+for char in str.reversed() {
+    if char == "0" && zero {}
+        zero = false
+        newStr.append(char)
+    }
+
+print(Int(newStr) ?? 1)
+
+//newStr += String(value).reversed()
+//print(Int(newStr) ?? 0)
+var sdasd = 2
+print()
+
+
+/// MARK: - LeetCode 1. Two Sum
+var array = [0,0]
+var nums = [4,3,1,1,5]
+var target = 9
+
+for i in 0...nums.count-2 {
+    for j in i+1...nums.count - 1 {
+            if nums[i] + nums[j] == target {
+                array[0] = i
+                array[1] = j
+            }
+        }
+}
+print(array)
