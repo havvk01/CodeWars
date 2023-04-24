@@ -1,0 +1,12 @@
+/// MARK: - 8 kyu - Kata Example Twist
+var websites = Array<String>(repeating: "codewars", count: 1000)
+
+print(websites)
+
+/// MARK: - 7 kyu - Disemvowel Trolls
+var s = "avbgouymnoaeio"
+var list = ["a","e","i","o","u","A","E","I","O","U",]
+func disemvowel(_ s: String) -> String {
+    s.filter{ !list.contains(String($0))}
+}
+print(disemvowel(s))
