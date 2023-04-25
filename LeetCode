@@ -56,6 +56,6 @@ print(array)
 /// MARK: - LeetCode 9. Palindrome Number
 class Solution {
     func isPalindrome(_ x: Int) -> Bool {
-        String(x) == String(String(x).reversed()) ? true : false
+        String(x) == String(String(x).reversed())
     }
 }
