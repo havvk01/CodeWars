@@ -24,28 +24,18 @@ print(sum)
 
 
 /// MARK: - LeetCode 7. Reverse Integer
-var value = -1000002000
-var str = ""
-var newStr = ""
-var zero = true
+class Solution {
+    func reverse(_ x: Int) -> Int {
+    var newX = x
+    var new = 0
 
-if value <= 0 {
-    newStr.append("-")
-    value = abs(value)
-}
-str = String(value)
-for char in str.reversed() {
-    if char == "0" && zero {}
-        zero = false
-        newStr.append(char)
+    while newX != 0 {
+        new = (new * 10) + (newX % 10)
+        newX /= 10
     }
-
-print(Int(newStr) ?? 1)
-
-//newStr += String(value).reversed()
-//print(Int(newStr) ?? 0)
-var sdasd = 2
-print()
+    return new < Int32.min || new > Int32.max ? 0 : new
+    }
+}
 
 
 /// MARK: - LeetCode 1. Two Sum
