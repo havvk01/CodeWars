@@ -75,3 +75,27 @@ class Solution {
         return pref
     }
 }
+
+/// MARK: - LeetCode 20. Valid Parentheses
+class Solution {
+    func isValid(_ s: String) -> Bool {
+        if s.isEmpty || s.count % 2 != 0 { return false }
+        var sStack = [Character]()
+        for str in s {
+            switch str {
+                case "(":
+                    sStack.append(")")
+                case "[":
+                    sStack.append("]")
+                case "{":
+                    sStack.append("}")
+                default: 
+                    if sStack.isEmpty || sStack.removeLast() != str {
+                        return false
+                        break
+                    }
+            }
+        }
+        return sStack.isEmpty ? true : false
+    }
+}
