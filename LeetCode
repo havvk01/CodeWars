@@ -59,3 +59,19 @@ class Solution {
         String(x) == String(String(x).reversed())
     }
 }
+
+/// MARK: - LeetCode 14. Longest Common Prefix
+class Solution {
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        if strs.isEmpty {
+            return ""
+        }
+        var pref = strs[0]
+        for str in strs {
+            while !str.hasPrefix(pref) {
+                pref = String(pref.dropLast())
+            }
+        }
+        return pref
+    }
+}
