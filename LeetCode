@@ -99,3 +99,24 @@ class Solution {
         return sStack.isEmpty ? true : false
     }
 }
+
+/// MARK: - LeetCode 66. Plus One
+class Solution {
+    func plusOne(_ digits: [Int]) -> [Int] {
+        var digits = digits
+    if digits.min() == 9 {
+        var newdigits = [1]
+        newdigits.append(contentsOf: repeatElement(0, count: digits.count))
+        return (newdigits)
+    }
+    else {
+        var counter = 1
+        while digits[digits.count - counter] == 9 {
+            digits[digits.count - counter] = 0
+            counter += 1
+        }
+        digits[digits.count - counter] += 1
+    }
+    return (digits)
+    }
+}
