@@ -155,3 +155,20 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
     nums.removeLast(nums.count - index - 1)
     return index + 1
 }
+
+
+/// MARK: - LeetCode  80. Remove Duplicates from Sorted Array II
+func removeDuplicates(_ nums: inout [Int]) -> Int {
+    var index = 2
+    
+    for _ in nums {
+        if index + 1 > nums.count { return nums.count }
+        if nums[index] <= nums[index - 2] {
+            nums.append(nums.remove(at: index))
+        } else {
+            index += 1
+        }
+    }
+    nums.removeLast(nums.count - index)
+    return nums.count
+}
