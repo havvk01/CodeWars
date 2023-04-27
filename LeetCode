@@ -172,3 +172,8 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
     nums.removeLast(nums.count - index)
     return nums.count
 }
+
+/// MARK: - LeetCode  81. Search in Rotated Sorted Array II
+func search(_ nums: [Int], _ target: Int) -> Bool {
+        nums.contains(target)
+    }
