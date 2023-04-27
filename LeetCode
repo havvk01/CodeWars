@@ -137,3 +137,21 @@ func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
     nums.filter {$0 != val}
     return(nums.count)
 }
+
+/// MARK: - LeetCode  26. Remove Duplicates from Sorted Array
+func removeDuplicates(_ nums: inout [Int]) -> Int {
+    var newArray:[Int] = []
+    nums.forEach { newArray.contains($0) ? nil : newArray.append($0) }
+    nums = newArray
+    return nums.count
+}
+
+func removeDuplicates(_ nums: inout [Int]) -> Int {
+    var index = 0
+    for num in nums where num != nums[index] {
+        index += 1
+        nums[index] = num
+    }
+    nums.removeLast(nums.count - index - 1)
+    return index + 1
+}
