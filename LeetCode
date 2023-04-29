@@ -200,3 +200,13 @@ func mySqrt(_ x: Int) -> Int {
         return left * left > x ? left - 1 : left
     }
 }
+
+/// MARK: - LeetCode 1470. Shuffle the Array
+func shuffle(_ nums: [Int], _ n: Int) -> [Int] {
+var newNums: [Int] = []
+    for count in 0...n - 1 {
+        newNums.append(nums[count])
+        newNums.append(nums[count + n])
+    }
+    return newNums
+}
