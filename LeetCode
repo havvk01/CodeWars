@@ -219,3 +219,7 @@ func mostWordsFound(_ sentences: [String]) -> Int {
     }
 return (result.max() ?? 0)
 }
+
+func mostWordsFound2(_ sentences: [String]) -> Int {
+    sentences.map { $0.components(separatedBy: " ").count }.max() ?? 0
+}
