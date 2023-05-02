@@ -223,3 +223,13 @@ return (result.max() ?? 0)
 func mostWordsFound2(_ sentences: [String]) -> Int {
     sentences.map { $0.components(separatedBy: " ").count }.max() ?? 0
 }
+
+
+// 1528: 1528. Shuffle String
+func restoreString(_ s: String, _ indices: [Int]) -> String {
+    var newString = ""
+    indices.forEach { count in
+        newString.append(s.)
+    }
+    return ""
+    }
