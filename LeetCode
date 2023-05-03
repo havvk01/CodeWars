@@ -225,11 +225,12 @@ func mostWordsFound2(_ sentences: [String]) -> Int {
 }
 
 
-// 1528: 1528. Shuffle String
+/// MARK: - LeetCode 1528. Shuffle String
 func restoreString(_ s: String, _ indices: [Int]) -> String {
-    var newString = ""
+    var newS = s.compactMap {$0}
+    var newString = newS
     indices.forEach { count in
-        newString.append(s.)
+        newString[indices[count]] = newS[count]
     }
-    return ""
-    }
+    return String(newString)
+}
