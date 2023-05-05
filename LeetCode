@@ -237,9 +237,9 @@ func restoreString(_ s: String, _ indices: [Int]) -> String {
 
 /// MARK: - LeetCode 1979. Find Greatest Common Divisor of Array
    func findGCD(_ nums: [Int]) -> Int {
-        let maxNum = nums.max()!, minNum = nums.min()!
-        for div in stride(from: minNum, to: 1, by: -1) {
-            if maxNum % div == 0, minNum % div == 0 { 
+        let max = nums.max()!, min = nums.min()!
+        for div in stride(from: min, to: 1, by: -1) {
+            if max % div == 0, min % div == 0 { 
                 return div
             }
         }
