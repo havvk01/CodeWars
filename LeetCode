@@ -245,3 +245,10 @@ func restoreString(_ s: String, _ indices: [Int]) -> String {
         }
         return 1
     }
+    
+/// MARK: - LeetCode 58. Length of Last Word
+    func lengthOfLastWord(_ s: String) -> Int {
+        var result = s.components(separatedBy: [" "])
+        result.removeAll(where: {$0 == ""} )
+        return result[result.count - 1].count
+    }
